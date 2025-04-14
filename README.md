@@ -1,11 +1,22 @@
-# training-dee
+# React Interview questions
 
-Diana is simply just awesome
+In a React component, how would you conditionally render a
+'Login' button if the user is logged out, and a 'Logout'
+button if they're logged in?
 
-## training begins
+Solution
 
-I am learning how to use the terminal 👋
+function AuthButton() {
+const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-### training concepts
+if (isLoggedIn) {
+return <button onClick={() => setIsLoggedIn(false)}>Logout</button>;
 
-- **Variables**: A variable is a name given to a value. It allows us to store and
+}
+
+return
+
+<button onClick={() => setIsLoggedIn(true)}>Login
+
+</button>;
+}
